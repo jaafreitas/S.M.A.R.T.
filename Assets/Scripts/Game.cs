@@ -8,10 +8,11 @@ public class Game : MonoBehaviour
     {
         Camera();
         Table();
+        Nails();
         Ball();
     }
 
-    void Camera()
+    private void Camera()
     {
         mainCamera = new GameObject();
         mainCamera.name = "Camera";
@@ -21,12 +22,17 @@ public class Game : MonoBehaviour
         mainCamera.AddComponent<Camera>();
     }
 
-    void Table()
+    private void Table()
     {
         gameObject.AddComponent<Board>();
     }
 
-    void Ball()
+    private void Nails()
+    {
+        gameObject.AddComponent<Nails>();
+    }
+
+    private void Ball()
     {
         gameObject.AddComponent<Ball>();
     }
